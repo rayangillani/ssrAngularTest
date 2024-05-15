@@ -26,7 +26,6 @@ export class ListComponent implements OnInit {
   initData = () => {
     this.listService.getPhotosList().subscribe({
       next: (res: Photo[]) => {
-        // this.photoList = res;
         this.orignalPhotoList = res;
         this.photoList = res.slice(
           (this.currentPage - 1) * this.pageSize,
